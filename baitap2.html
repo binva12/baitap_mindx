@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // Prints help message to the console
+// Returns a string
+let input = [60, 40, 55, 75, 64];
+let array1 = [];
+let array2 = [];
+let var1 = 0;
+let var2 = 0;
+let sum1 = 0;
+let sum2 = 0;
+function alternating(input) {
+    input.forEach((element, index) => {
+      if(index == 0){
+        array1.push(element);
+      }else if(index == 1){
+        array2.push(element);
+      }else if(index % 2 == 0){
+        array1.push(element);
+      }else if(index % 2 != 0){
+        array2.push(element);
+      }
+    });
+    return array1, array2;
+  }  
+function SumEachArray(array1, array2) {
+
+  array1.forEach(element => {
+    sum1 += element;
+  });
+  array2.forEach(element => {
+    sum2 += element;
+  });
+  return sum1, sum2;
+}
+
+alternating(input);
+SumEachArray(array1, array2);
+console.log(array1, array2);
+console.log(sum1, sum2);
+  </script>
+</body>
+
+</html>
